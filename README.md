@@ -229,6 +229,8 @@ Create `styles.css` in the `public/css/` directory.
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -278,6 +280,48 @@ button {
 .bot-message {
   text-align: left;
   color: green;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+  }
+
+  #chat-messages {
+    height: 150px;
+  }
+
+  button {
+    padding: 5px;
+  }
+
+  form {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 5px;
+  }
+
+  #chat-messages {
+    height: 120px;
+  }
+
+  button {
+    padding: 3px;
+  }
+
+  form {
+    margin-bottom: 10px;
+  }
+
+  label, input {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 ```
 
